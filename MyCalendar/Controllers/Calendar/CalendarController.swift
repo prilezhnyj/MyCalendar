@@ -121,7 +121,7 @@ extension CalendarController {
     
     @objc private func editTableView(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Функционал на доработке", message: nil, preferredStyle: .alert)
-        let okeyAction = UIAlertAction(title: "Понятно", style: .cancel, handler: nil)
+        let okeyAction = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
         alert.addAction(okeyAction)
         present(alert, animated: true, completion: nil)
     }
