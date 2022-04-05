@@ -13,7 +13,7 @@ class NewBirthdayController: UIViewController {
     
     let headerNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "👤 Имя Фамилия"
+        label.text = "Имя Фамилия"
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +30,7 @@ class NewBirthdayController: UIViewController {
     
     let headerDateLabel: UILabel = {
         let label = UILabel()
-        label.text = "🎉 День рождения"
+        label.text = "День рождения"
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ class NewBirthdayController: UIViewController {
     
     let addPhotoLabel: UILabel = {
         let label = UILabel()
-        label.text = "📸 Добавьте фотографию"
+        label.text = "Добавьте фотографию"
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -84,7 +84,7 @@ class NewBirthdayController: UIViewController {
         
         addPhotoButton.addTarget(self, action: #selector(addPhotoTapped), for: .touchUpInside)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Сохранить", style: .plain, target: self, action: #selector(saveBirthday))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Сохранить", style: .done, target: self, action: #selector(saveBirthday))
     }
 }
 

@@ -13,7 +13,7 @@ class NewEventController: UIViewController {
     
     let headerTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "📌 Название мероприятия"
+        label.text = "Название мероприятия"
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +30,7 @@ class NewEventController: UIViewController {
     
     let headerDateLabel: UILabel = {
         let label = UILabel()
-        label.text = "🗓 Дата мероприятия"
+        label.text = "Дата мероприятия"
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ class NewEventController: UIViewController {
     
     let headerTimeLabel: UILabel = {
         let label = UILabel()
-        label.text = "⌛️ Время мероприятия"
+        label.text = "Время мероприятия"
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +69,7 @@ class NewEventController: UIViewController {
         
         settingConstraints()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Сохранить", style: .plain, target: self, action: #selector(saveButton))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Сохранить", style: .done, target: self, action: #selector(saveButton))
         
     }
 }

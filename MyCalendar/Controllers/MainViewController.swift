@@ -17,14 +17,10 @@ class MainViewController: UITabBarController {
     
     private func settingsTabBarControllers() {
         let calendarController = creationNavigationController(viewController: CalendarController(), nameItem: "Календарь", nameImageItem: "calendar.day.timeline.left")
-        
-        let tasksViewController = creationNavigationController(viewController: TasksViewController(), nameItem: "Задачи", nameImageItem: "list.dash")
-        
-        let notesController = creationNavigationController(viewController: NotesController(), nameItem: "Заметки", nameImageItem: "pencil.and.outline")
-        
+//        let tasksViewController = creationNavigationController(viewController: TasksViewController(), nameItem: "Задачи", nameImageItem: "list.dash")
         let settingsController = creationNavigationController(viewController: SettingsController(), nameItem: "Настройки", nameImageItem: "gear")
         
-        viewControllers = [calendarController, tasksViewController, notesController, settingsController]
+        viewControllers = [calendarController, settingsController]
     }
 
     

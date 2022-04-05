@@ -1,5 +1,5 @@
 //
-//  CalendarStorageManager.swift
+//  StorageManager.swift
 //  MyCalendar
 //
 //  Created by Максим Боталов on 29.03.2022.
@@ -33,6 +33,20 @@ class CalendarBirthdayStorageManager {
     static func deleteBirthday(_ birthday: BirthdayModel) {
         try! realm.write({
             realm.delete(birthday)
+        })
+    }
+}
+
+class TaskStorageManager {
+    static func saveTask(_ task: TaskModel) {
+        try! realm.write({
+            realm.add(task)
+        })
+    }
+    
+    static func deleteTask(_ task: TaskModel) {
+        try! realm.write({
+            realm.delete(task)
         })
     }
 }

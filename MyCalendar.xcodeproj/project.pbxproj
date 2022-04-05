@@ -10,7 +10,6 @@
 		4B1C960F867D8DCBC99F9271 /* Pods_MyCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E5523CF9ABC23FC75CFB42 /* Pods_MyCalendar.framework */; };
 		EC29CCC427EE0C1700788804 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCC327EE0C1700788804 /* TasksViewController.swift */; };
 		EC29CCC627EE0DEC00788804 /* NewEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCC527EE0DEC00788804 /* NewEventController.swift */; };
-		EC29CCCA27EF3E7900788804 /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCC927EF3E7900788804 /* NotesController.swift */; };
 		EC29CCCD27EF3FB400788804 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCCC27EF3FB400788804 /* SettingsController.swift */; };
 		EC29CCD227F07A1900788804 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCD127F07A1900788804 /* CalendarCell.swift */; };
 		EC29CCD527F07DA800788804 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCD427F07DA800788804 /* UIStackView.swift */; };
@@ -26,6 +25,11 @@
 		EC3B378827EDB9DA0000EAEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC3B378727EDB9DA0000EAEE /* Assets.xcassets */; };
 		EC3B378B27EDB9DA0000EAEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC3B378927EDB9DA0000EAEE /* LaunchScreen.storyboard */; };
 		EC3B379327EDBBAD0000EAEE /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3B379227EDBBAD0000EAEE /* CalendarController.swift */; };
+		EC654BD127F5C08C00876EB6 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD027F5C08C00876EB6 /* TaskModel.swift */; };
+		EC654BD527F5C6E700876EB6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD427F5C6E700876EB6 /* TaskCell.swift */; };
+		EC654BD727F5E7D500876EB6 /* NewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD627F5E7D500876EB6 /* NewTaskController.swift */; };
+		EC654BD927F5EE9700876EB6 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD827F5EE9700876EB6 /* Text.swift */; };
+		ECED608127F7961500812521 /* TaskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED608027F7961500812521 /* TaskStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +38,6 @@
 		E7F645D3B1FD383BCF2882D5 /* Pods-MyCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCalendar.release.xcconfig"; path = "Target Support Files/Pods-MyCalendar/Pods-MyCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		EC29CCC327EE0C1700788804 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		EC29CCC527EE0DEC00788804 /* NewEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventController.swift; sourceTree = "<group>"; };
-		EC29CCC927EF3E7900788804 /* NotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
 		EC29CCCC27EF3FB400788804 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		EC29CCD127F07A1900788804 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		EC29CCD427F07DA800788804 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
@@ -52,6 +55,11 @@
 		EC3B378A27EDB9DA0000EAEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC3B378C27EDB9DA0000EAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC3B379227EDBBAD0000EAEE /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		EC654BD027F5C08C00876EB6 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		EC654BD427F5C6E700876EB6 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		EC654BD627F5E7D500876EB6 /* NewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskController.swift; sourceTree = "<group>"; };
+		EC654BD827F5EE9700876EB6 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		ECED608027F7961500812521 /* TaskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 				EC3B378927EDB9DA0000EAEE /* LaunchScreen.storyboard */,
 				EC3B378727EDB9DA0000EAEE /* Assets.xcassets */,
 				EC3B378C27EDB9DA0000EAEE /* Info.plist */,
+				EC654BD827F5EE9700876EB6 /* Text.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -108,7 +117,6 @@
 				EC3B378227EDB9D90000EAEE /* MainViewController.swift */,
 				EC29CCBF27EE094300788804 /* Calendar */,
 				EC29CCC227EE0BF400788804 /* Tasks */,
-				EC29CCC727EF3E0000788804 /* Notes */,
 				EC29CCC827EF3E1600788804 /* Settings */,
 			);
 			path = Controllers;
@@ -127,16 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				EC29CCC327EE0C1700788804 /* TasksViewController.swift */,
+				EC654BD627F5E7D500876EB6 /* NewTaskController.swift */,
 			);
 			path = Tasks;
-			sourceTree = "<group>";
-		};
-		EC29CCC727EF3E0000788804 /* Notes */ = {
-			isa = PBXGroup;
-			children = (
-				EC29CCC927EF3E7900788804 /* NotesController.swift */,
-			);
-			path = Notes;
 			sourceTree = "<group>";
 		};
 		EC29CCC827EF3E1600788804 /* Settings */ = {
@@ -150,6 +151,7 @@
 		EC29CCCE27F079E300788804 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC654BD227F5C6D500876EB6 /* Tasks */,
 				EC29CCCF27F079F700788804 /* Calendar */,
 			);
 			path = View;
@@ -200,8 +202,8 @@
 		EC34AB3C27F1C289006ED136 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC34AB3D27F1C2AC006ED136 /* CalendarModel.swift */,
-				EC34AB3F27F1C30C006ED136 /* BirthdayModel.swift */,
+				EC654BCE27F5C05F00876EB6 /* Calendar */,
+				EC654BCF27F5C06700876EB6 /* Tasks */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +255,40 @@
 				EC29CCBD27EE08F800788804 /* Resources */,
 			);
 			path = MyCalendar;
+			sourceTree = "<group>";
+		};
+		EC654BCE27F5C05F00876EB6 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				EC34AB3D27F1C2AC006ED136 /* CalendarModel.swift */,
+				EC34AB3F27F1C30C006ED136 /* BirthdayModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		EC654BCF27F5C06700876EB6 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				EC654BD027F5C08C00876EB6 /* TaskModel.swift */,
+				ECED608027F7961500812521 /* TaskStorage.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		EC654BD227F5C6D500876EB6 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				EC654BD327F5C6DA00876EB6 /* Cell */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		EC654BD327F5C6DA00876EB6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC654BD427F5C6E700876EB6 /* TaskCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,15 +411,19 @@
 				EC34AB4427F1D8C6006ED136 /* CalendarNewEventProtocol.swift in Sources */,
 				EC34AB3E27F1C2AC006ED136 /* CalendarModel.swift in Sources */,
 				EC3B378327EDB9D90000EAEE /* MainViewController.swift in Sources */,
+				EC654BD927F5EE9700876EB6 /* Text.swift in Sources */,
 				EC3B379327EDBBAD0000EAEE /* CalendarController.swift in Sources */,
+				EC654BD127F5C08C00876EB6 /* TaskModel.swift in Sources */,
+				EC654BD527F5C6E700876EB6 /* TaskCell.swift in Sources */,
+				EC654BD727F5E7D500876EB6 /* NewTaskController.swift in Sources */,
 				EC29CCC427EE0C1700788804 /* TasksViewController.swift in Sources */,
 				EC29CCD227F07A1900788804 /* CalendarCell.swift in Sources */,
 				EC29CCC627EE0DEC00788804 /* NewEventController.swift in Sources */,
+				ECED608127F7961500812521 /* TaskStorage.swift in Sources */,
 				EC3B377F27EDB9D90000EAEE /* AppDelegate.swift in Sources */,
 				EC34AB4027F1C30C006ED136 /* BirthdayModel.swift in Sources */,
 				EC29CCD527F07DA800788804 /* UIStackView.swift in Sources */,
 				EC3B378127EDB9D90000EAEE /* SceneDelegate.swift in Sources */,
-				EC29CCCA27EF3E7900788804 /* NotesController.swift in Sources */,
 				EC29CCD927F099AB00788804 /* NewBirthdayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,7 +47,7 @@ class CalendarController: UIViewController {
     }()
     
     let choiceSegmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: ["⏱ События", "🎉 Дни рождения"])
+        let segmentedControl = UISegmentedControl(items: ["События", "Дни рождения"])
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         return segmentedControl
@@ -81,7 +81,7 @@ class CalendarController: UIViewController {
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newEventCreate))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Изменить", style: .plain, target: self, action: #selector(editTableView))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Редактировать", style: .plain, target: self, action: #selector(editTableView))
         
         showCalendarButton.addTarget(self, action: #selector(showCalendarButtonTapped), for: .touchUpInside)
         choiceSegmentedControl.addTarget(self, action: #selector(choiceSegmentedControlAction), for: .valueChanged)
@@ -186,7 +186,7 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
             let oneBirthday = birthdays[indexPath.row]
             cell.nameLabel.text = oneBirthday.name
             cell.birthdayLabel.text = "Дата: " + oneBirthday.date
-            cell.oldOfYearsLabel.text = "⛔️ Функция нeдоступна"
+            cell.oldOfYearsLabel.text = "Функция нeдоступна"
             return cell
         }
     }
