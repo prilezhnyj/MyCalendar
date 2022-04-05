@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     func alertDate(complitionHandler: @escaping (String) -> Void) {
-        let alert = UIAlertController(title: "", message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let datePiker = UIDatePicker()
         datePiker.datePickerMode = .date
