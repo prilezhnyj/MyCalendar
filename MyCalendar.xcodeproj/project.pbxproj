@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B1C960F867D8DCBC99F9271 /* Pods_MyCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E5523CF9ABC23FC75CFB42 /* Pods_MyCalendar.framework */; };
+		EC12743F27FCC6FF0075CE0A /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC12743E27FCC6FF0075CE0A /* AlertDate.swift */; };
+		EC12744127FCD71D0075CE0A /* AlertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC12744027FCD71D0075CE0A /* AlertTime.swift */; };
 		EC29CCC427EE0C1700788804 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCC327EE0C1700788804 /* TasksViewController.swift */; };
 		EC29CCC627EE0DEC00788804 /* NewEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCC527EE0DEC00788804 /* NewEventController.swift */; };
 		EC29CCCD27EF3FB400788804 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29CCCC27EF3FB400788804 /* SettingsController.swift */; };
@@ -36,6 +38,8 @@
 		174F4582E2D7665995CE212E /* Pods-MyCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCalendar.debug.xcconfig"; path = "Target Support Files/Pods-MyCalendar/Pods-MyCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E5523CF9ABC23FC75CFB42 /* Pods_MyCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F645D3B1FD383BCF2882D5 /* Pods-MyCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCalendar.release.xcconfig"; path = "Target Support Files/Pods-MyCalendar/Pods-MyCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		EC12743E27FCC6FF0075CE0A /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
+		EC12744027FCD71D0075CE0A /* AlertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTime.swift; sourceTree = "<group>"; };
 		EC29CCC327EE0C1700788804 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		EC29CCC527EE0DEC00788804 /* NewEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventController.swift; sourceTree = "<group>"; };
 		EC29CCCC27EF3FB400788804 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 				C0E5523CF9ABC23FC75CFB42 /* Pods_MyCalendar.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC12743D27FCC6EE0075CE0A /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				EC12743E27FCC6FF0075CE0A /* AlertDate.swift */,
+				EC12744027FCD71D0075CE0A /* AlertTime.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		EC29CCBC27EE08E300788804 /* Application */ = {
@@ -177,6 +190,7 @@
 		EC29CCD327F07D8500788804 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EC12743D27FCC6EE0075CE0A /* Alert */,
 				EC29CCD427F07DA800788804 /* UIStackView.swift */,
 			);
 			path = Extensions;
@@ -418,12 +432,14 @@
 				EC654BD727F5E7D500876EB6 /* NewTaskController.swift in Sources */,
 				EC29CCC427EE0C1700788804 /* TasksViewController.swift in Sources */,
 				EC29CCD227F07A1900788804 /* CalendarCell.swift in Sources */,
+				EC12744127FCD71D0075CE0A /* AlertTime.swift in Sources */,
 				EC29CCC627EE0DEC00788804 /* NewEventController.swift in Sources */,
 				ECED608127F7961500812521 /* TaskStorage.swift in Sources */,
 				EC3B377F27EDB9D90000EAEE /* AppDelegate.swift in Sources */,
 				EC34AB4027F1C30C006ED136 /* BirthdayModel.swift in Sources */,
 				EC29CCD527F07DA800788804 /* UIStackView.swift in Sources */,
 				EC3B378127EDB9D90000EAEE /* SceneDelegate.swift in Sources */,
+				EC12743F27FCC6FF0075CE0A /* AlertDate.swift in Sources */,
 				EC29CCD927F099AB00788804 /* NewBirthdayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

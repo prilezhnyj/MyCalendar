@@ -69,8 +69,21 @@ class NewEventController: UIViewController {
         
         settingConstraints()
         
+        dateTextField.delegate = self
+        timeTextField.delegate = self
+        
+        dateTextField.addTarget(self, action: #selector(changeDate), for: .allEvents)
+        timeTextField.addTarget(self, action: #selector(changeTime), for: .allEvents)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Сохранить", style: .done, target: self, action: #selector(saveButton))
         
+    }
+}
+
+extension NewEventController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
@@ -97,6 +110,18 @@ extension NewEventController {
             delelete.newEventUpdate(title: titleTextField.text!, date: dateTextField.text!, time: timeTextField.text!)
             navigationController?.popViewController(animated: true)
             print("Сохраняю мероптиятие")
+        }
+    }
+    
+    @objc private func changeDate() {
+        alertDate { date in
+            self.dateTextField.text = date
+        }
+    }
+    
+    @objc private func changeTime() {
+        alertTime { time in
+            self.timeTextField.text = time
         }
     }
 }
