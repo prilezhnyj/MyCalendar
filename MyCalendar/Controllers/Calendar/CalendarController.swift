@@ -177,8 +177,13 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let selectedIndex = choiceSegmentedControl.selectedSegmentIndex
         
+        
+        
         if selectedIndex == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellCalendarID, for: indexPath) as! CalendarCell
+            
+            tableView.separatorInset = .init(top: 0, left: 15, bottom: 0, right: -15)
+            
             let oneEvent = events[indexPath.row]
             cell.titleLabel.text = oneEvent.title
             cell.dateLabel.text = "Дата: " + oneEvent.date
@@ -188,12 +193,14 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellBirthdayID, for: indexPath) as! BirthdaysCell
             let oneBirthday = birthdays[indexPath.row]
             
+            tableView.separatorInset = .init(top: 0, left: 90, bottom: 0, right: -15)
+            
             let data = oneBirthday.image
             let image = UIImage(data: data!)
             
             cell.nameLabel.text = oneBirthday.name
             cell.userImage.image = image!
-            cell.birthdayLabel.text = "Дата: " + oneBirthday.date
+            cell.birthdayLabel.text = "День рождения: " + oneBirthday.date
             cell.oldOfYearsLabel.text = "Функция нeдоступна"
             return cell
         }

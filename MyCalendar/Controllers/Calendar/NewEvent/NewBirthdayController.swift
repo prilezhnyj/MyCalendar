@@ -11,6 +11,8 @@ class NewBirthdayController: UIViewController {
     
     var delegateBirthday: CalendarNewBirthdayProtocol!
     
+    let defaultImageUser = UIImage(named: "defaultImageUser")
+    
     let headerNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Имя Фамилия"
@@ -81,8 +83,9 @@ class NewBirthdayController: UIViewController {
         settingConstraints()
         
         addPhotoImageView.isHidden = true
-        
+    
         addPhotoButton.addTarget(self, action: #selector(addPhotoTapped), for: .touchUpInside)
+        dateTextField.addTarget(self, action: #selector(changeDate), for: .allEvents)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Сохранить", style: .done, target: self, action: #selector(saveBirthday))
     }
@@ -94,7 +97,7 @@ class NewBirthdayController: UIViewController {
 extension NewBirthdayController {
     
     @objc private func saveBirthday(_ sender: UIBarButtonItem) {
-        delegateBirthday.newBirthday(image: addPhotoImageView.image!, name: nameTextField.text!, date: dateTextField.text!)
+        delegateBirthday.newBirthday(image: addPhotoImageView.image ?? defaultImageUser!, name: nameTextField.text!, date: dateTextField.text!)
         navigationController?.popViewController(animated: true)
         print("Сохраняю день рождения")
     }
@@ -102,6 +105,12 @@ extension NewBirthdayController {
     @objc private func addPhotoTapped() {
         alertAddPhoto { source in
             self.chooseImagePicker(source)
+        }
+    }
+    
+    @objc private func changeDate() {
+        alertDate { date in
+            self.dateTextField.text = date
         }
     }
 }
