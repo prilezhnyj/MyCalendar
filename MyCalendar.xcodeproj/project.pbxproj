@@ -31,6 +31,7 @@
 		EC654BD527F5C6E700876EB6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD427F5C6E700876EB6 /* TaskCell.swift */; };
 		EC654BD727F5E7D500876EB6 /* NewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD627F5E7D500876EB6 /* NewTaskController.swift */; };
 		EC654BD927F5EE9700876EB6 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD827F5EE9700876EB6 /* Text.swift */; };
+		EC8C5FC027FF3FDD00C9518E /* AlertAddPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C5FBF27FF3FDD00C9518E /* AlertAddPhoto.swift */; };
 		ECED608127F7961500812521 /* TaskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED608027F7961500812521 /* TaskStorage.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		EC654BD427F5C6E700876EB6 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		EC654BD627F5E7D500876EB6 /* NewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskController.swift; sourceTree = "<group>"; };
 		EC654BD827F5EE9700876EB6 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		EC8C5FBF27FF3FDD00C9518E /* AlertAddPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAddPhoto.swift; sourceTree = "<group>"; };
 		ECED608027F7961500812521 /* TaskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 			children = (
 				EC12743E27FCC6FF0075CE0A /* AlertDate.swift */,
 				EC12744027FCD71D0075CE0A /* AlertTime.swift */,
+				EC8C5FBF27FF3FDD00C9518E /* AlertAddPhoto.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -164,8 +167,8 @@
 		EC29CCCE27F079E300788804 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EC654BD227F5C6D500876EB6 /* Tasks */,
 				EC29CCCF27F079F700788804 /* Calendar */,
+				EC654BD227F5C6D500876EB6 /* Tasks */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8C5FC027FF3FDD00C9518E /* AlertAddPhoto.swift in Sources */,
 				EC29CCCD27EF3FB400788804 /* SettingsController.swift in Sources */,
 				EC307CC527F327D400ACFFB4 /* CalendarStorageManager.swift in Sources */,
 				EC29CCD727F082EE00788804 /* BirthdaysCell.swift in Sources */,

@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 protocol CalendarNewEventProtocol {
     func newEventUpdate(title: String, date: String, time: String)
 }
 
 protocol CalendarNewBirthdayProtocol {
-    func newBirthday(image: String, name: String, date: String)
+    func newBirthday(image: UIImage, name: String, date: String)
 }

@@ -67,10 +67,8 @@ class NewBirthdayController: UIViewController {
     
     let addPhotoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Man")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.isHidden = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -81,6 +79,8 @@ class NewBirthdayController: UIViewController {
         title = "Добавить день рождения"
         
         settingConstraints()
+        
+        addPhotoImageView.isHidden = true
         
         addPhotoButton.addTarget(self, action: #selector(addPhotoTapped), for: .touchUpInside)
         
@@ -94,17 +94,33 @@ class NewBirthdayController: UIViewController {
 extension NewBirthdayController {
     
     @objc private func saveBirthday(_ sender: UIBarButtonItem) {
-        delegateBirthday.newBirthday(image: "", name: nameTextField.text!, date: dateTextField.text!)
+        delegateBirthday.newBirthday(image: addPhotoImageView.image!, name: nameTextField.text!, date: dateTextField.text!)
         navigationController?.popViewController(animated: true)
         print("Сохраняю день рождения")
     }
     
     @objc private func addPhotoTapped() {
-        let alert = UIAlertController(title: "Функционал на доработке", message: nil, preferredStyle: .alert)
-        let okeyAction = UIAlertAction(title: "Понятно", style: .cancel, handler: nil)
-        alert.addAction(okeyAction)
-        present(alert, animated: true, completion: nil)
-        print("Добавляю фото")
+        alertAddPhoto { source in
+            self.chooseImagePicker(source)
+        }
+    }
+}
+
+extension NewBirthdayController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func chooseImagePicker(_ source: UIImagePickerController.SourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(source) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = source
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        addPhotoImageView.image = info[.editedImage] as? UIImage
+        dismiss(animated: true, completion: nil)
+        addPhotoImageView.isHidden = false
     }
 }
 

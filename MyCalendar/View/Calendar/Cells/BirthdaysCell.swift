@@ -9,7 +9,7 @@ import UIKit
 
 class BirthdaysCell: UITableViewCell {
     
-    let userImage: UIImageView = {
+    var userImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Photo")
         imageView.translatesAutoresizingMaskIntoConstraints = false

@@ -20,7 +20,7 @@ class CalendarController: UIViewController {
     private var dateDelegate: String!
     private var timeDelegate: String!
     
-    private var imageBirthdayDelegate: String!
+    private var imageBirthdayDelegate: UIImage!
     private var nameBirthdayDelegate: String!
     private var dateBirthdayDelegate: String!
     
@@ -147,11 +147,14 @@ extension CalendarController: CalendarNewEventProtocol {
 }
 
 extension CalendarController: CalendarNewBirthdayProtocol {
-    func newBirthday(image: String, name: String, date: String) {
+    
+    func newBirthday(image: UIImage, name: String, date: String) {
         imageBirthdayDelegate = image
         nameBirthdayDelegate = name
         dateBirthdayDelegate = date
-        let newBirthday = BirthdayModel(image: imageBirthdayDelegate, name: nameBirthdayDelegate, date: dateBirthdayDelegate)
+        
+        let imageData = imageBirthdayDelegate.pngData()
+        let newBirthday = BirthdayModel(image: imageData!, name: nameBirthdayDelegate, date: dateBirthdayDelegate)
         CalendarBirthdayStorageManager.saveEvent(newBirthday)
         tableView.reloadData()
     }
@@ -184,7 +187,12 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellBirthdayID, for: indexPath) as! BirthdaysCell
             let oneBirthday = birthdays[indexPath.row]
+            
+            let data = oneBirthday.image
+            let image = UIImage(data: data!)
+            
             cell.nameLabel.text = oneBirthday.name
+            cell.userImage.image = image!
             cell.birthdayLabel.text = "Дата: " + oneBirthday.date
             cell.oldOfYearsLabel.text = "Функция нeдоступна"
             return cell
