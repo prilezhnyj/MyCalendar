@@ -120,10 +120,7 @@ extension CalendarController {
     }
     
     @objc private func editTableView(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Функционал на доработке", message: nil, preferredStyle: .alert)
-        let okeyAction = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
-        alert.addAction(okeyAction)
-        present(alert, animated: true, completion: nil)
+        alertUnavailable()
     }
     
     @objc private func choiceSegmentedControlAction() {
@@ -238,14 +235,10 @@ extension CalendarController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let selectedIndex = choiceSegmentedControl.selectedSegmentIndex
         
         if selectedIndex == 0 {
-            let alert = UIAlertController(title: "Ошибка", message: "На данный момент редактирование события «\(events[indexPath.row].title)» невозможно. Пожалуйста, удалите и создайте событие заново.", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title:  "Закрыть", style: .cancel, handler: nil)
-            alert.addAction(cancelAction)
-            present(alert, animated: true, completion: nil)
+            alertNoAccess()
         }
     }
 }

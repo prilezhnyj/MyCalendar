@@ -103,7 +103,7 @@ extension NewEventController {
     @objc private func saveButton(_ sender: UIBarButtonItem) {
         if titleTextField.text?.isEmpty == true || dateTextField.text?.isEmpty == true || timeTextField.text?.isEmpty == true {
             let alert = UIAlertController(title: "Ошибка заполнения", message: "Необходимо заполнить все поля", preferredStyle: .alert)
-            let okeyAction = UIAlertAction(title: "Понятно", style: .cancel, handler: nil)
+            let okeyAction = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
             alert.addAction(okeyAction)
             present(alert, animated: true, completion: nil)
         } else {

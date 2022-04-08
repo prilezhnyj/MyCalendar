@@ -27,6 +27,8 @@
 		EC3B378827EDB9DA0000EAEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC3B378727EDB9DA0000EAEE /* Assets.xcassets */; };
 		EC3B378B27EDB9DA0000EAEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC3B378927EDB9DA0000EAEE /* LaunchScreen.storyboard */; };
 		EC3B379327EDBBAD0000EAEE /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3B379227EDBBAD0000EAEE /* CalendarController.swift */; };
+		EC5498E0280091CB0093C103 /* AlertNoAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5498DF280091CB0093C103 /* AlertNoAccess.swift */; };
+		EC5498E2280092C70093C103 /* AlertUnavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5498E1280092C70093C103 /* AlertUnavailable.swift */; };
 		EC654BD127F5C08C00876EB6 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD027F5C08C00876EB6 /* TaskModel.swift */; };
 		EC654BD527F5C6E700876EB6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD427F5C6E700876EB6 /* TaskCell.swift */; };
 		EC654BD727F5E7D500876EB6 /* NewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC654BD627F5E7D500876EB6 /* NewTaskController.swift */; };
@@ -60,6 +62,8 @@
 		EC3B378A27EDB9DA0000EAEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC3B378C27EDB9DA0000EAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC3B379227EDBBAD0000EAEE /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		EC5498DF280091CB0093C103 /* AlertNoAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNoAccess.swift; sourceTree = "<group>"; };
+		EC5498E1280092C70093C103 /* AlertUnavailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUnavailable.swift; sourceTree = "<group>"; };
 		EC654BD027F5C08C00876EB6 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		EC654BD427F5C6E700876EB6 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		EC654BD627F5E7D500876EB6 /* NewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				EC12743E27FCC6FF0075CE0A /* AlertDate.swift */,
 				EC12744027FCD71D0075CE0A /* AlertTime.swift */,
 				EC8C5FBF27FF3FDD00C9518E /* AlertAddPhoto.swift */,
+				EC5498DF280091CB0093C103 /* AlertNoAccess.swift */,
+				EC5498E1280092C70093C103 /* AlertUnavailable.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -425,8 +431,10 @@
 				EC8C5FC027FF3FDD00C9518E /* AlertAddPhoto.swift in Sources */,
 				EC29CCCD27EF3FB400788804 /* SettingsController.swift in Sources */,
 				EC307CC527F327D400ACFFB4 /* CalendarStorageManager.swift in Sources */,
+				EC5498E2280092C70093C103 /* AlertUnavailable.swift in Sources */,
 				EC29CCD727F082EE00788804 /* BirthdaysCell.swift in Sources */,
 				EC34AB4427F1D8C6006ED136 /* CalendarNewEventProtocol.swift in Sources */,
+				EC5498E0280091CB0093C103 /* AlertNoAccess.swift in Sources */,
 				EC34AB3E27F1C2AC006ED136 /* CalendarModel.swift in Sources */,
 				EC3B378327EDB9D90000EAEE /* MainViewController.swift in Sources */,
 				EC654BD927F5EE9700876EB6 /* Text.swift in Sources */,
